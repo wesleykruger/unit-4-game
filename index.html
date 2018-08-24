@@ -1,12 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <title>Gym Warrior</title>
 </head>
+
 <body>
-    
+    <content>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">Gym Warrior</h1>
+                <p class="lead">Out-lift your rivals and become the ultimate gym bro!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success gameWin"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-danger gameLose"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="btn btn-primary mb-4 attackBtn">Attack</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success attackMsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <class class="col-12">
+                    <div class="alert alert-danger counterMsg"></div>
+                </class>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4 characterSelectorTitle">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>
+                                <span>Choose your Brophet!</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row characterSelector text-center">
+                        <div class="col-4">
+                            <div class="card h-100 character1Card">
+                                <!-- Card image -->
+                                <img class="card-img-top character1Image" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/slideshow2/retro-nerd-1448403302.jpg?resize=480:*"
+                                    alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body d-flex flex-column">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title character1Title">
+                                        <a>Newbophyte</a>
+                                    </h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Newest gym member. Determined to one day bench the bar.</p>
+                                    <!-- Button -->
+                                    <a href="#" class="btn btn-primary mt-auto character1Btn">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card h-100 character2Card">
+                                <!-- Card image -->
+                                <img class="card-img-top character2Image" src="https://pbs.twimg.com/media/Cw1tA7VXAAEvFue.jpg" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body d-flex flex-column">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title character2Title">
+                                        <a>Bisenberg</a>
+                                    </h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Could only lift when he wasn't at his day job. So he quit his day job.</p>
+                                    <!-- Button -->
+                                    <a href="#" class="btn btn-primary mt-auto character2Btn">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card h-100 character3Card">
+                                <!-- Card image -->
+                                <img class="card-img-top character3Image" src="https://www.mercurynews.com/wp-content/uploads/2016/08/20121017_022038_gm_albert_einstein_horiz.jpg?w=490"
+                                    alt="Binstein">
+
+                                <!-- Card content -->
+                                <div class="card-body d-flex flex-column">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title character3Title">
+                                        <a>Binstein</a>
+                                    </h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Traveling brofessor, has conquered countless gyms. e=mcSWOLED.</p>
+                                    <!-- Button -->
+                                    <a href="#" class="btn btn-primary mt-auto character3Btn">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 yourCharacterSelection"></div>
+                <div class="col-6 yourStats">
+                    <div class="row">
+                        <div class="col-12 yourHpTitle">
+                            <h2>HP</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 yourHp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 enemySelectTitle">
+                    <h1>
+                        <span>Choose your lifting rival!</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="row enemySelect text-center">
+                <div class="col-4">
+                    <div class="card enemy1Card">
+                        <!-- Card image -->
+                        <img class="card-img-top enemy1Image" src="https://ohmy.disney.com/wp-content/uploads/2013/12/Hercules.jpg" alt="Brocules">
+
+                        <!-- Card content -->
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- Title -->
+                            <h4 class="card-title enemy1Title">
+                                <a>Brocules</a>
+                            </h4>
+                            <!-- Text -->
+                            <p class="card-text">Pre-expansion. This guy's so tiny you can barely see him.</p>
+                            <!-- Button -->
+                            <a href="#" class="btn btn-primary mt-auto enemy1Btn">Select</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card enemy2Card">
+                        <!-- Card image -->
+                        <img class="card-img-top enemy2Image" src="https://static1.fjcdn.com/comments/Semirelated+he+bro+from+smite+_4bdb99d16e98be0a0f03904e9d2c75ef.png"
+                            alt="Broseidon">
+
+                        <!-- Card content -->
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- Title -->
+                            <h4 class="card-title enemy2Title">
+                                <a>Broseidon</a>
+                            </h4>
+                            <!-- Text -->
+                            <p class="card-text">Lord of the brocean.</p>
+                            <!-- Button -->
+                            <a href="#" class="btn btn-primary mt-auto enemy2Btn">Select</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card enemy3Card">
+                        <!-- Card image -->
+                        <img class="card-img-top enemy3Image" src="https://fitforpurose.files.wordpress.com/2015/08/jacob-petersson-odin-costume-bits.jpg"
+                            alt="Brodin">
+
+                        <!-- Card content -->
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- Title -->
+                            <h4 class="card-title enemy3Title">
+                                <a>Brodin</a>
+                            </h4>
+                            <!-- Text -->
+                            <p class="card-text">This gym's swolsei. Fight at your own risk.</p>
+                            <!-- Button -->
+                            <a href="#" class="btn btn-primary mt-auto enemy3Btn">Select</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6 enemySelection"></div>
+                <div class="col-6 enemyStats">
+                    <div class="row">
+                        <div class="col-12 enemyHpTitle">
+                            <h2>HP</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 enemyHp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </content>
 </body>
+
 </html>
